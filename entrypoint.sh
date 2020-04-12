@@ -4,8 +4,11 @@
 WORKSPACE_DIR="/github/workspace/"
 DIR="${WORKSPACE_DIR}${1}"
 
+ls
+
 for FILE_EXT in '*.js' '*.css' '*.html'
 do
+	echo $FILE_EXT
 	FILES=`find $DIR -type f -path $FILE_EXT`
 	if [ -z "$FILES" ]
 	then
